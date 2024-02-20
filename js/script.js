@@ -1,31 +1,23 @@
 let x = document.querySelector(".x");
 let o = document.querySelector(".o");
-let boxes = document.querySelector(".box");
+let boxes = document.querySelectorAll(".box");
 let buttons = document.querySelector("#buttons-container button");
 let messagecontainer = document.querySelector("message");
 let messagetext = document.querySelector("#message p");
-let secondplayer;
+let secondPlayer;
 
 // Contador de jogadas
 let player1 = 0;
 let player2 = 0;
 
 // Adicionando o evento de click aos boxes
-for (let i = 0; i < boxes.legth; i++) {
+for (let i = 0; i < boxes.length; i++) {
 
 
     // quando alguem clica na caixa
-    boxes[i].addEventlister("click", function () {
+    boxes[i].addEventListener("click", function () {
 
         let el = checkEl(player1, player2);
-
-        if (player1 == player2) {
-            // x
-            el = x;
-        } else {
-            // o
-            el - 0;
-        }
 
         // verifica se ja tem x ou bola(o)
 
@@ -42,7 +34,7 @@ for (let i = 0; i < boxes.legth; i++) {
                 player2++;
             }
 
-            checkeWindCondition();
+            // checkeWindCondition();
 
         }
     });
@@ -50,6 +42,7 @@ for (let i = 0; i < boxes.legth; i++) {
 
 };
 
+// ve quem vai jogar
 
 
 function checkEl(player1, player2) {
@@ -67,15 +60,15 @@ function checkEl(player1, player2) {
 // verifica quem ganho
 function checkeWindCondition() {
 
-    let b1 = document.getElementById("#block1")
-    let b2 = document.getElementById("#block2")
-    let b3 = document.getElementById("#block3")
-    let b4 = document.getElementById("#block4")
-    let b5 = document.getElementById("#block5")
-    let b6 = document.getElementById("#block6")
-    let b7 = document.getElementById("#block7")
-    let b8 = document.getElementById("#block8")
-    let b9 = document.getElementById("#block0")
+    let b1 = document.getElementById("block1")
+    let b2 = document.getElementById("block2")
+    let b3 = document.getElementById("block3")
+    let b4 = document.getElementById("block4")
+    let b5 = document.getElementById("block5")
+    let b6 = document.getElementById("block6")
+    let b7 = document.getElementById("block7")
+    let b8 = document.getElementById("block8")
+    let b9 = document.getElementById("block0")
 
     // horizontais
 
